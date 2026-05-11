@@ -17,4 +17,6 @@ export interface Product {
 export type RootStackParamList = {
   Login: undefined;
   Menu: { usuario: string };
+  ProductList: undefined;
+  ProductForm: { product?: Product };
 };
