@@ -30,7 +30,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
     try {
       const user = await loginUser(usuario.trim(), contrasenia.trim());
       if (user) {
-        navigation.replace('Menu', { usuario: user.usuario });
+        navigation.replace('MainMenu', { usuario: user.usuario });
       } else {
         Alert.alert('Error', 'Usuario o contraseña incorrectos');
       }
@@ -52,7 +52,7 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
       Alert.alert('Éxito', 'Usuario registrado correctamente');
       const user = await loginUser(usuario.trim(), contrasenia.trim());
       if (user) {
-        navigation.replace('Menu', { usuario: user.usuario });
+        navigation.replace('MainMenu', { usuario: user.usuario });
       }
     } catch (error: any) {
       Alert.alert('Error', error.message || 'Error al registrarse');

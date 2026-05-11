@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
 import LoginScreen from '../screens/LoginScreen';
-import MenuScreen from '../screens/MenuScreen';
+import MainMenuScreen from '../screens/MainMenuScreen';
 import ProductListScreen from '../screens/ProductListScreen';
 import ProductFormScreen from '../screens/ProductFormScreen';
 
@@ -16,9 +16,9 @@ export default function AppNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Menu"
-        component={MenuScreen}
-        options={{ title: 'Menú de Productos' }}
+        name="MainMenu"
+        component={MainMenuScreen}
+        options={{ title: 'Inicio', headerBackVisible: false }}
       />
       <Stack.Screen
         name="ProductList"
